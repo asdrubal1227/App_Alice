@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.brayanasdrubal.appalice.info_cuidador">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:id="@+id/Layout"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/scrollView"
+            android:layout_alignStart="@+id/scrollView"
+            android:layout_alignRight="@+id/scrollView"
+            android:layout_alignEnd="@+id/scrollView">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Crea tu cuenta"
+                android:textSize="42dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/royalblue"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:id="@+id/textView"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black"
+                android:layout_below="@+id/textView"></LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Información básica"
+                android:textSize="33dp"
+                android:textColor="@color/royalblue"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:id="@+id/textView3"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/textView" />
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:id="@+id/editText"
+                android:background="@color/royalblue"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="60dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/textView3"
+                android:nestedScrollingEnabled="false"
+                android:inputType="textAutoCorrect" />
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:id="@+id/editText2"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:textSize="60dp"
+                android:layout_gravity="center"
+                android:background="@color/royalblue"
+                android:layout_below="@+id/editText"
+                android:layout_centerHorizontal="true"
+                android:inputType="textAutoCorrect" />
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:inputType="number|textAutoCorrect"
+                android:textAlignment="center"
+                android:textSize="60dp"
+                android:background="@color/royalblue"
+                android:ems="100"
+                android:id="@+id/editText3"
+                android:layout_gravity="center"
+                android:layout_below="@+id/editText2"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Siguiente"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:id="@+id/button"
+                android:gravity="center"
+                android:background="@color/dodgerblue"
+                android:layout_gravity="bottom|right"
+                android:layout_alignBottom="@+id/Layout"
+                android:layout_alignParentRight="@+id/Layout"
+                android:layout_alignParentEnd="@+id/Layout" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
