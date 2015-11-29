@@ -37,6 +37,7 @@
             android:text="Juegos"
             android:textSize="45dp"
             android:layout_weight="1"
+            android:layout_marginLeft="20dp"
             android:textColor="@color/orange"
             android:layout_gravity="center"
             android:textAlignment="center"
@@ -51,7 +52,7 @@
         <LinearLayout
             android:layout_gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="5dp"
+            android:layout_height="3dp"
             android:layout_marginTop="5dp"
             android:background="@color/white"
             android:visibility="invisible"
@@ -60,15 +61,15 @@
         <LinearLayout
             android:layout_gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="5dp"
+            android:layout_height="3dp"
             android:layout_marginTop="5dp"
             android:background="@color/orange"
-            android:layout_weight="0.5">
+            android:layout_weight="0.4">
         </LinearLayout>
         <LinearLayout
             android:layout_gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="8dp"
+            android:layout_height="3dp"
             android:layout_marginTop="5dp"
             android:background="@color/white"
             android:visibility="invisible"
