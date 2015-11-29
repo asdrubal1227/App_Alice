@@ -136,7 +136,8 @@
                         android:layout_height="match_parent"
                         android:id="@+id/botjuego"
                         android:src="@drawable/menujuegos_01"
-                        android:visibility="invisible" />
+                        android:visibility="invisible"
+                        android:onClick="onClick_juegos" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -159,7 +160,8 @@
                             android:layout_height="match_parent"
                             android:id="@+id/botmemo"
                             android:src="@drawable/menumeorias_01"
-                            android:visibility="invisible" />
+                            android:visibility="invisible"
+                            android:onClick="onClick_memo" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -176,6 +178,7 @@
                     android:src="@drawable/menuevaluate_01"
                     android:visibility="invisible"
                     android:layout_gravity="center|bottom"
+                    android:onClick="onClick_evalu"
                     android:layout_weight="1.77" />
                 </LinearLayout>
 

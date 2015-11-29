@@ -1,11 +1,14 @@
 package com.example.brayanasdrubal.appalice;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,8 +19,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         refeshPrefs();
     }
+    public void onClick_juegos (View v){
+        Toast.makeText(MainActivity.this, "Juegos", Toast.LENGTH_SHORT).show();
+        //Abrir la actividad
+        Intent i = new Intent(MainActivity.this, Juegos.class);
+        startActivity(i);
+        finish();
 
+    }
+    public void onClick_memo (View v){
+        Toast.makeText(MainActivity.this, "Memorias", Toast.LENGTH_SHORT).show();
+        //Abrir la actividad
+        Intent i = new Intent(MainActivity.this, Memorias.class);
+        startActivity(i);
+        finish();
 
+    }
+    public void onClick_evalu (View v){
+        Toast.makeText(MainActivity.this, "Evaluate", Toast.LENGTH_SHORT).show();
+        //Abrir la actividad
+        Intent i = new Intent(MainActivity.this, Evaluate.class);
+        startActivity(i);
+        finish();
+
+    }
    /* public void onClick (View v){
         Toast.makeText(MainActivity.this, "Cuidador", Toast.LENGTH_SHORT).show();
         //Abrir la actividad
