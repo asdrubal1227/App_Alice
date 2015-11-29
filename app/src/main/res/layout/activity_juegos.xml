@@ -9,5 +9,72 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.brayanasdrubal.appalice.Juegos"
     android:background="@drawable/fondo_juegos">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/g"
+        android:layout_gravity="top|center">
 
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="80dp"
+                android:id="@+id/imageView"
+                android:src="@drawable/icon_juegos"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Juegos"
+            android:textSize="45dp"
+            android:layout_weight="1"
+            android:textColor="@color/orange"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:id="@+id/textView" />
+</LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="@+id/g">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:visibility="invisible"
+            android:layout_weight="2">
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/orange"
+            android:layout_weight="0.5">
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:visibility="invisible"
+            android:layout_weight="2">
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
 </RelativeLayout>
