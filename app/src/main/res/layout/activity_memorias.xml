@@ -9,5 +9,74 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/fondo_memorias"
     tools:context="com.example.brayanasdrubal.appalice.Memorias">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/g"
+                android:layout_gravity="top|center">
+
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/imageView"
+                    android:src="@drawable/icon_memorias"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Memorias"
+                    android:textSize="45dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/royalblue"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:id="@+id/textView" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="@+id/g">
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:visibility="invisible"
+                    android:layout_weight="2">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/royalblue"
+                    android:layout_weight="0.4">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:visibility="invisible"
+                    android:layout_weight="2">
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
