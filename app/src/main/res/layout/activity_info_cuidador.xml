@@ -30,7 +30,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="Información del CUIDADOR"
-                android:textSize="42dp"
+                android:textSize="45dp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/white"
                 android:layout_gravity="center"

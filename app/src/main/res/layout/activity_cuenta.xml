@@ -27,7 +27,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Crea tu cuenta"
-            android:textSize="42dp"
+            android:textSize="45dp"
             android:layout_marginTop="10dp"
             android:textColor="@color/royalblue"
             android:layout_gravity="center"
