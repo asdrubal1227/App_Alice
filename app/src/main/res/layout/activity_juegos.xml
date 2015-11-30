@@ -14,8 +14,8 @@
     android:layout_height="match_parent">
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="top|center">
     <LinearLayout
         android:orientation="horizontal"
@@ -76,6 +76,74 @@
             android:layout_weight="2">
         </LinearLayout>
     </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_weight=".3">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="    SUDOKU"
+                android:textSize="35dp"
+                android:textColor="@color/white"
+                android:background="@drawable/boton_sudoku"
+                android:adjustViewBounds="true" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="    LETRAS"
+                android:textSize="35dp"
+                android:textColor="@color/white"
+                android:background="@drawable/boton_letras"
+                android:adjustViewBounds="true"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="        MEMORIA"
+                android:textSize="35dp"
+                android:textColor="@color/white"
+                android:background="@drawable/boton_memoria"
+                android:adjustViewBounds="true"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="    LÓGICA"
+                android:textSize="35dp"
+                android:textColor="@color/white"
+                android:background="@drawable/boton_logica"
+                android:adjustViewBounds="true"/>
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    </LinearLayout>
+        </LinearLayout>
 </LinearLayout>
 </ScrollView>
 </RelativeLayout>
