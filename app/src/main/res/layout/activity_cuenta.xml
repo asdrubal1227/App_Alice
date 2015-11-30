@@ -46,7 +46,7 @@
             android:text="Información básica"
             android:textSize="33dp"
             android:textColor="@color/royalblue"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:layout_marginBottom="40dp"
             android:layout_gravity="center"
             android:textAlignment="center"
@@ -66,14 +66,14 @@
                 android:layout_weight="1"></LinearLayout>
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="250dp"
+    android:layout_height="match_parent"
     android:layout_weight="0.35"
     android:measureWithLargestChild="true"
     android:layout_gravity="center_vertical"
     android:orientation="vertical">
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="70dp"
             android:id="@+id/editText"
             android:hint="Nombre"
             android:layout_margin="5dp"
@@ -81,16 +81,16 @@
             android:textColor="@color/white"
             android:background="@color/royalblue"
             android:layout_gravity="center"
-            android:textSize="45dp"
+            android:textSize="30dp"
             android:layout_below="@+id/textView3"
             android:inputType="textAutoCorrect"
             android:layout_weight=".3" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="70dp"
             android:id="@+id/editText2"
-            android:textSize="45dp"
+            android:textSize="30dp"
             android:layout_margin="5dp"
             android:hint="Apellido"
             android:textColorHint="@color/lightgray"
@@ -102,9 +102,9 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="70dp"
             android:inputType="number"
-            android:textSize="45dp"
+            android:textSize="30dp"
             android:layout_margin="5dp"
             android:hint="Edad"
             android:textColorHint="@color/lightgray"

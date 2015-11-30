@@ -43,36 +43,52 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
+                android:layout_marginBottom="40dp"
                 android:background="@color/black"
                 android:layout_below="@+id/textView"></LinearLayout>
 
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:measureWithLargestChild="true"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:measureWithLargestChild="true"
+                android:layout_weight="1"></LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.30"
+                android:measureWithLargestChild="true"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
             <EditText
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:id="@+id/editText"
                 android:background="@color/goldenrod"
-                android:layout_marginTop="40dp"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textSize="45dp"
+                android:textSize="30dp"
                 android:hint="Nombre"
                 android:textColorHint="@color/white"
                 android:textColor="@color/white"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/textView3"
-                android:nestedScrollingEnabled="false"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
                 android:inputType="textAutoCorrect" />
 
             <EditText
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:id="@+id/editText2"
-                android:layout_margin="10dp"
-                android:textAlignment="center"
-                android:textSize="45dp"
+                android:layout_margin="5dp"
+                android:textSize="30dp"
                 android:hint="Apellido"
                 android:textColorHint="@color/white"
                 android:textColor="@color/white"
@@ -80,15 +96,16 @@
                 android:background="@color/goldenrod"
                 android:layout_below="@+id/editText"
                 android:layout_centerHorizontal="true"
-                android:inputType="textAutoCorrect" />
+                android:inputType="textAutoCorrect"
+                android:layout_weight="1" />
 
             <EditText
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:inputType="number"
-                android:textAlignment="center"
-                android:textSize="45dp"
+                android:textSize="30dp"
                 android:hint="Edad"
+                android:layout_margin="5dp"
                 android:textColorHint="@color/white"
                 android:textColor="@color/white"
                 android:background="@color/goldenrod"
@@ -96,16 +113,15 @@
                 android:id="@+id/editText3"
                 android:layout_gravity="center"
                 android:layout_below="@+id/editText2"
-                android:layout_marginBottom="10dp"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1" />
 
             <EditText
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:inputType="textAutoCorrect"
-                android:textAlignment="center"
-                android:layout_marginBottom="10dp"
-                android:textSize="45dp"
+                android:layout_margin="5dp"
+                android:textSize="30dp"
                 android:hint="Parentesco"
                 android:textColorHint="@color/white"
                 android:textColor="@color/white"
@@ -114,16 +130,16 @@
                 android:id="@+id/editText4"
                 android:layout_gravity="center"
                 android:layout_below="@+id/editText3"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"/>
 
             <EditText
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:inputType="number|textAutoCorrect"
-                android:textAlignment="center"
-                android:layout_marginBottom="50dp"
-                android:textSize="45dp"
+                android:textSize="30dp"
                 android:hint="N° de contacto"
+                android:layout_margin="5dp"
                 android:textColorHint="@color/white"
                 android:textColor="@color/white"
                 android:background="@color/goldenrod"
@@ -131,12 +147,22 @@
                 android:id="@+id/editText5"
                 android:layout_gravity="center"
                 android:layout_below="@+id/editText4"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Siguiente"
+                android:layout_marginTop="50dp"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:id="@+id/button"
