@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         //Abrir la actividad
         Intent i = new Intent(MainActivity.this, Juegos.class);
         startActivity(i);
-        finish();
 
     }
     public void onClick_memo (View v){
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         //Abrir la actividad
         Intent i = new Intent(MainActivity.this, Memorias.class);
         startActivity(i);
-        finish();
 
     }
     public void onClick_evalu (View v){
@@ -40,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         //Abrir la actividad
         Intent i = new Intent(MainActivity.this, Evaluate.class);
         startActivity(i);
-        finish();
 
     }
    /* public void onClick (View v){

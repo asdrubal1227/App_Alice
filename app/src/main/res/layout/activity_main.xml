@@ -130,14 +130,14 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:layout_gravity="center|fill"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:onClick="onClick_juegos">
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/botjuego"
                         android:src="@drawable/menujuegos_01"
-                        android:visibility="invisible"
-                        android:onClick="onClick_juegos" />
+                        android:visibility="invisible" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -154,14 +154,14 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:layout_gravity="bottom"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:onClick="onClick_memo" >
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:id="@+id/botmemo"
                             android:src="@drawable/menumeorias_01"
-                            android:visibility="invisible"
-                            android:onClick="onClick_memo" />
+                            android:visibility="invisible"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -171,6 +171,13 @@
                     android:orientation="vertical"
                     android:layout_weight="1">
 
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:layout_weight="1"
+                        android:onClick="onClick_evalu">
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -178,8 +185,8 @@
                     android:src="@drawable/menuevaluate_01"
                     android:visibility="invisible"
                     android:layout_gravity="center|bottom"
-                    android:onClick="onClick_evalu"
                     android:layout_weight="1.77" />
+                    </LinearLayout>
                 </LinearLayout>
 
             </LinearLayout>
