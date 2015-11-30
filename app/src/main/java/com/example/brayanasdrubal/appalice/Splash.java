@@ -16,7 +16,7 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
-        /*this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        /*this.getWidow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         WindowManager.LayoutParams.FLAG_FULLSCREEN;
         /*android.support.v7.app.ActionBar actionBar=getSupportActionBar();
         actionBar.hide();                                                   */
