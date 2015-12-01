@@ -8,7 +8,9 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/fondo_evaluate"
-    tools:context="com.example.brayanasdrubal.appalice.Evaluate"><ScrollView
+    tools:context="com.example.brayanasdrubal.appalice.Evaluate">
+
+    <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
@@ -19,6 +21,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:id="@+id/g"
             android:layout_gravity="top|center">
@@ -47,6 +50,8 @@
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_weight="1"
             android:layout_alignParentBottom="@+id/g">
             <LinearLayout
                 android:layout_gravity="center"
@@ -75,7 +80,62 @@
                 android:layout_weight="2">
             </LinearLayout>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:measureWithLargestChild="true"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:measureWithLargestChild="true"
+                android:layout_weight="1"></LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="0.1"
+                android:measureWithLargestChild="true"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:id="@+id/editText"
+                    android:hint="Iniciar nuevo TEST"
+                    android:layout_margin="10dp"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:background="@drawable/boton_evaluate"
+                    android:layout_gravity="center"
+                    android:textSize="30dp"
+                    android:layout_below="@+id/textView3"
+                    android:layout_weight=".3" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:id="@+id/editText2"
+                    android:textSize="30dp"
+                    android:layout_margin="10dp"
+                    android:hint="Ver progreso de la enfermedad"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:background="@drawable/boton_evaluate"
+                    android:layout_below="@+id/editText"
+                    android:layout_weight=".3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
     </LinearLayout>
+
+
 </ScrollView>
 
 </RelativeLayout>
