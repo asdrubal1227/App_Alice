@@ -38,7 +38,7 @@
                     android:textSize="45dp"
                     android:layout_weight="1"
                     android:layout_marginLeft="20dp"
-                    android:textColor="@color/royalblue"
+                    android:textColor="#025F87"
                     android:layout_gravity="center"
                     android:textAlignment="center"
                     android:id="@+id/textView" />
@@ -64,7 +64,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="3dp"
                     android:layout_marginTop="5dp"
-                    android:background="@color/royalblue"
+                    android:background="#025F87"
                     android:layout_weight="0.4">
                 </LinearLayout>
                 <LinearLayout
