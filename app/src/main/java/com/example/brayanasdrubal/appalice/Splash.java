@@ -9,7 +9,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Splash extends AppCompatActivity {
-    private static final long SPLASH_DELAY = 5000;
+    private static final long SPLASH_DELAY = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class Splash extends AppCompatActivity {
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                Intent i = new Intent().setClass(Splash.this, cuenta.class);
+                Intent i = new Intent().setClass(Splash.this, MainActivity.class);
                 startActivity(i);
                 finish();
             }
