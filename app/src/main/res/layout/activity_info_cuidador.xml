@@ -149,6 +149,7 @@
                         android:textColorHint="@color/white"
                         android:textColor="@color/white"
                         android:background="@drawable/boton3"
+                        android:gravity="center"
                         android:ems="100"
                         android:id="@+id/editText5"
                         android:layout_gravity="center"
