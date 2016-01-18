@@ -33,7 +33,9 @@
         <activity
             android:name=".video"
             android:theme="@style/Base.Theme.AppCompat.Dialog" />
-        <activity android:name=".sudoku"></activity>
+        <activity android:name=".sudoku" />
+        <activity android:name=".Logica"></activity>
+        <activity android:name=".finjuego"></activity>
     </application>
 
 </manifest>

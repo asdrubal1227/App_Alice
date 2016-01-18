@@ -16,7 +16,9 @@ public class Juegos extends AppCompatActivity {
     }
 
     public void sudoku (View view){
-        startActivity(new Intent(Juegos.this,sudoku.class));
-
+        startActivity(new Intent(Juegos.this, sudoku.class));
+    }
+    public void logica (View view){
+        startActivity(new Intent(Juegos.this,Logica.class));
     }
 }

@@ -140,6 +140,7 @@
                         android:text="LÓGICA"
                         android:textSize="35dp"
                         android:textColor="@color/white"
+                        android:onClick="logica"
                         android:background="@drawable/boton_logica"
                         android:adjustViewBounds="true"/>
                 </LinearLayout>
