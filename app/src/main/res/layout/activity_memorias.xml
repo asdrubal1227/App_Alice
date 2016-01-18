@@ -151,8 +151,6 @@
                             android:layout_gravity="bottom|center"
                             android:gravity="bottom|center"
                             android:hint="Nombre"
-                            android:allowUndo="false"
-                            android:autoText="false"
                             android:inputType="textCapSentences|textAutoComplete" />
 
                     </LinearLayout>
@@ -210,8 +208,6 @@
                             android:layout_gravity="bottom|center"
                             android:gravity="bottom|center"
                             android:hint="Nombre"
-                            android:allowUndo="true"
-                            android:autoText="true"
                             android:inputType="textAutoComplete" />
                     </LinearLayout>
                 </LinearLayout>
@@ -226,12 +222,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center"
-                android:background="@color/royalblue"
+                android:background="@drawable/boton2"
                 android:layout_marginTop="50dp"
                 android:id="@+id/bo"
                 android:onClick="confirma"
                 android:gravity="center"
-                android:text="Confirmar nombres"/>
+                android:text="Confirmar"
+                android:textColor="@color/white"/>
         </LinearLayout>
     </ScrollView>
 

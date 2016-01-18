@@ -1,6 +1,8 @@
 package com.example.brayanasdrubal.appalice;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +14,9 @@ import android.widget.TextView;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
+import static com.example.brayanasdrubal.appalice.R.color.forestgreen;
+import static com.example.brayanasdrubal.appalice.R.color.red;
 
 public class Logica extends AppCompatActivity {
 
@@ -43,7 +48,7 @@ public class Logica extends AppCompatActivity {
         TextView p = (TextView) findViewById(R.id.punt);
         p.setText(Integer.toString(punt));
         TextView gp = (TextView) findViewById(R.id.result);
-        gp.setVisibility(View.INVISIBLE);
+        gp.setVisibility(View.GONE);
         num1 = (int) (Math.random() * 50 + 1);
         num2 = (int) (Math.random() * 50 + 1);
         signo = (int) (Math.random() * 3 + 1);
@@ -68,18 +73,21 @@ public class Logica extends AppCompatActivity {
         }
     }
 
+    @TargetApi(Build.VERSION_CODES.M)
     public void verifica(View v) {
         EditText res = (EditText) findViewById(R.id.valor);
         valor = res.getText().toString();
         if (valor.equals(Integer.toString(result))) {
             punt=punt+10;
             TextView gp = (TextView) findViewById(R.id.result);
-            gp.setText("¡CORRECTO!");
+            gp.setText("¡BIEN!");
+            gp.setTextColor(getResources().getColor(forestgreen));
             gp.setVisibility(View.VISIBLE);
         } else {
             punt=punt-5;
             TextView gp = (TextView) findViewById(R.id.result);
-            gp.setText("INCORRECTO");
+            gp.setText("Es: "+Integer.toString(result));
+            gp.setTextColor(getResources().getColor(red));
             gp.setVisibility(View.VISIBLE);
         }
         countDownTimer.cancel();
@@ -97,12 +105,17 @@ public class Logica extends AppCompatActivity {
             super(startTime, interval);
         }
 
+        @TargetApi(Build.VERSION_CODES.M)
         @Override
         public void onFinish()
         {
             TextView tim = (TextView) findViewById(R.id.time);
-            tim.setText("Listo!");
+            tim.setText("0");
             countDownTimer.cancel();
+            TextView gp = (TextView) findViewById(R.id.result);
+            gp.setText("TIEMPO!");
+            gp.setTextColor(getResources().getColor(red));
+            gp.setVisibility(View.VISIBLE);
             ju=ju-1;
             TextView v = (TextView) findViewById(R.id.vida);
             v.setText("Vidas: " + Integer.toString(ju));
@@ -119,7 +132,7 @@ public class Logica extends AppCompatActivity {
 
     public void refrescar(){
         Button b=(Button) findViewById(R.id.bl);
-        b.setVisibility(View.INVISIBLE);
+        b.setVisibility(View.GONE);
 
         TimerTask task = new TimerTask() {
             @Override

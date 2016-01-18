@@ -35,18 +35,6 @@
                     android:id="@+id/time"
                     android:textSize="30dp"/>
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/vida"
-                    android:text="Vida: 0"
-                    android:textSize="30dp"/>
-
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -68,64 +56,78 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/vida"
+                android:text="Vida: 0"
+                android:textSize="30dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/result"
+                android:text="¡CORRECTO!"
+                android:layout_gravity="center"
+                android:textColor="@color/orangered"
+                android:gravity="center"
+                android:textSize="40dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
                 android:id="@+id/primernum"
-                android:textSize="100dp"/>
+                android:textSize="50dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/signo"
                 android:text="+"
-                android:textSize="100dp"/>
+                android:textSize="50dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/segundonum"
                 android:text="1"
-                android:textSize="100dp"/>
+                android:textSize="50dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="="
-                android:textSize="100dp"/>
+                android:textSize="50dp"/>
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:hint="___"
+                android:id="@+id/valor"
+                android:gravity="center"
+                android:background="@drawable/cell_shape"
+                android:textSize="40dp"
+                android:inputType="numberSigned" />
         </LinearLayout>
-        <EditText
-            android:layout_width="200dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:hint="___"
-            android:id="@+id/valor"
-            android:layout_marginTop="50dp"
-            android:gravity="center|bottom"
-            android:background="@drawable/cell_shape"
-            android:textSize="90dp"
-            android:inputType="numberSigned" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:id="@+id/result"
-            android:text="¡CORRECTO!"
-            android:layout_gravity="center"
-            android:textColor="@color/orangered"
-            android:gravity="center"
-            android:textSize="50dp"/>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:textColor="@color/aliceblue"
             android:background="@drawable/boton2"
             android:layout_gravity="center"
             android:id="@+id/bl"
             android:text="Listo"
             android:onClick="verifica"
-            android:textSize="50dp"/>
+            android:textSize="30dp"/>
 
     </LinearLayout></ScrollView>
 </RelativeLayout>
