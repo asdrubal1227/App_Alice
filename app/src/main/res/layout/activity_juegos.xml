@@ -108,6 +108,7 @@
                         android:layout_margin="5dp"
                         android:text="SUDOKU"
                         android:textSize="35dp"
+                        android:onClick="sudoku"
                         android:textColor="@color/white"
                         android:background="@drawable/boton_sudoku"
                         android:adjustViewBounds="true" />
