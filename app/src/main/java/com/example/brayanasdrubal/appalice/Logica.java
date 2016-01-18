@@ -6,6 +6,7 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -15,7 +16,6 @@ import java.util.TimerTask;
 public class Logica extends AppCompatActivity {
 
     private MalibuCountDownTimer countDownTimer;
-    private boolean timerHasStarted=false;
     private final long startTime = 5000;
     private final long interval = 1000;
     int num1, num2, signo, result,v;
@@ -27,6 +27,8 @@ public class Logica extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logica);
+        Button b=(Button) findViewById(R.id.bl);
+        b.setVisibility(View.VISIBLE);
         countDownTimer = new MalibuCountDownTimer(startTime, interval);
         if (ju==0){
             countDownTimer.cancel();
@@ -34,7 +36,7 @@ public class Logica extends AppCompatActivity {
             overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
             finish();
         }else{
-            fin();
+            countDownTimer.start();
         }
         TextView v = (TextView) findViewById(R.id.vida);
         v.setText("Vidas: "+Integer.toString(ju));
@@ -80,26 +82,13 @@ public class Logica extends AppCompatActivity {
             gp.setText("INCORRECTO");
             gp.setVisibility(View.VISIBLE);
         }
-        fin();
+        countDownTimer.cancel();
         TextView p = (TextView) findViewById(R.id.punt);
         p.setText(Integer.toString(punt));
         refrescar();
     }
 
-    public void fin(){
 
-        if (!timerHasStarted)
-        {
-            countDownTimer.start();
-            timerHasStarted = true;
-        }
-        else
-        {
-
-            countDownTimer.cancel();
-            timerHasStarted = false;
-        }
-    }
     // CountDownTimer class
     public class MalibuCountDownTimer extends CountDownTimer {
 
@@ -112,8 +101,8 @@ public class Logica extends AppCompatActivity {
         public void onFinish()
         {
             TextView tim = (TextView) findViewById(R.id.time);
-            tim.setText("Listo!" );
-            fin();
+            tim.setText("Listo!");
+            countDownTimer.cancel();
             ju=ju-1;
             TextView v = (TextView) findViewById(R.id.vida);
             v.setText("Vidas: " + Integer.toString(ju));
@@ -129,6 +118,8 @@ public class Logica extends AppCompatActivity {
     }
 
     public void refrescar(){
+        Button b=(Button) findViewById(R.id.bl);
+        b.setVisibility(View.INVISIBLE);
 
         TimerTask task = new TimerTask() {
             @Override

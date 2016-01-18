@@ -119,6 +119,7 @@
             android:textColor="@color/aliceblue"
             android:background="@drawable/boton2"
             android:layout_gravity="center"
+            android:id="@+id/bl"
             android:text="Listo"
             android:onClick="verifica"
             android:textSize="50dp"/>
