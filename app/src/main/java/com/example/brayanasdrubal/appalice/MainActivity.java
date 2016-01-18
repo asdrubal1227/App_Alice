@@ -22,7 +22,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.keyes.youtube.OpenYouTubePlayerActivity;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerView;
 import com.touchmenotapps.widget.radialmenu.menu.v1.RadialMenuItem;
 import com.touchmenotapps.widget.radialmenu.menu.v1.RadialMenuWidget;
 
@@ -31,6 +32,8 @@ import java.util.Calendar;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    public YouTubePlayerView youtube;
+    public YouTubePlayer.OnInitializedListener onInitializedListener;
 
     private RadialMenuWidget pieMenu;
 
@@ -84,8 +87,8 @@ public class MainActivity extends AppCompatActivity {
         menuCloseItem.setOnMenuItemPressed(new RadialMenuItem.RadialMenuItemClickListener() {
             @Override
             public void execute() {
-                Intent IVideoIntent = new Intent(null, Uri.parse("ytv://"+"CEugWNAKJrE"), MainActivity.this, OpenYouTubePlayerActivity.class);
-                startActivity(IVideoIntent);
+                startActivity(new Intent(MainActivity.this, video.class));
+                pieMenu.dismiss();
 
                 /*startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=CkDWixxfgeQ")));
                 pieMenu.dismiss();//*/

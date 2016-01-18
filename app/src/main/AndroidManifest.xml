@@ -2,9 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.brayanasdrubal.appalice">
 
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon_app"
@@ -23,15 +24,14 @@
         <activity android:name=".info_cuidador" />
         <activity android:name=".Juegos" />
         <activity android:name=".Memorias" />
-        <activity android:name=".Evaluate"></activity>
+        <activity android:name=".Evaluate" />
         <activity
-        	android:name="com.keyes.youtube.OpenYouTubePlayerActivity"
-        	android:screenOrientation="fullSensor"
-        	android:configChanges="fontScale"
-        	android:theme="@style/Base.Theme.AppCompat.Light.DialogWhenLarge"
-        	android:label="@string/app_name">
-        </activity>
-
-</application>
+            android:name="com.keyes.youtube.OpenYouTubePlayerActivity"
+            android:configChanges="fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"></activity>
+        <activity android:name=".video"
+            android:theme="@style/Base.Theme.AppCompat.Dialog"></activity>
+    </application>
 
 </manifest>
