@@ -20,13 +20,13 @@ public class info_cuidador extends AppCompatActivity {
     }
     public void onClick (View v){
         Toast.makeText(info_cuidador.this, "Menú", Toast.LENGTH_SHORT).show();
+        EditText campo= (EditText) findViewById(R.id.editText5);
+        String num= campo.getText().toString();
         //Abrir la actividad
         SharedPreferences prefs = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor=prefs.edit();
-        EditText campo= (EditText) findViewById(R.id.editText5);
-        String num= campo.getText().toString();
         editor.putString("num",num);
-        editor.clear(); //Limpia todas las preferencias
+       // editor.clear(); //Limpia todas las preferencias
         //editor.remove("nombre");
         editor.commit();
         Intent i = new Intent(info_cuidador.this, MainActivity.class);

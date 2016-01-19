@@ -138,7 +138,6 @@ public class Logica extends AppCompatActivity {
             @Override
             public void run() {
                 startActivity(new Intent(Logica.this, Logica.class));
-                overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
                 finish();
             }
         };
@@ -154,7 +153,6 @@ public class Logica extends AppCompatActivity {
             countDownTimer.cancel();
             Logica.ju=5;
             Logica.punt=0;
-            startActivity(new Intent(Logica.this, Juegos.class));
             finish();
 
             return true;

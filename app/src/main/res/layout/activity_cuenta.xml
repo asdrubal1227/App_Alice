@@ -51,7 +51,7 @@
                 android:textSize="33dp"
                 android:textColor="#025F87"
                 android:layout_marginTop="30dp"
-                android:layout_marginBottom="40dp"
+                android:layout_marginBottom="10dp"
                 android:layout_gravity="center"
                 android:textAlignment="center"
                 android:id="@+id/textView3"
@@ -75,51 +75,97 @@
                     android:measureWithLargestChild="true"
                     android:layout_gravity="center_vertical"
                     android:orientation="vertical">
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre: "
+                    android:id="@+id/textView1"
+                    android:textSize="20dp"
+                    android:layout_weight=".3" />
+
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
-                        android:id="@+id/editText"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nom"
                         android:hint="Nombre"
                         android:layout_margin="5dp"
                         android:textColorHint="@color/lightgray"
                         android:textColor="@color/white"
                         android:background="@drawable/boton1"
-                        android:gravity="center"
+                        android:gravity="left"
                         android:layout_gravity="center"
-                        android:textSize="30dp"
-                        android:layout_below="@+id/textView3"
+                        android:textSize="20dp"
                         android:inputType="textAutoCorrect"
+                        android:layout_weight=".3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Nombre de Usuario: "
+                        android:id="@+id/textView2"
+                        android:textSize="20dp"
                         android:layout_weight=".3" />
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
-                        android:id="@+id/editText2"
-                        android:textSize="30dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/usu"
+                        android:hint="Usuario"
                         android:layout_margin="5dp"
-                        android:hint="Apellido"
                         android:textColorHint="@color/lightgray"
                         android:textColor="@color/white"
                         android:background="@drawable/boton1"
-                        android:gravity="center"
-                        android:layout_below="@+id/editText"
+                        android:gravity="left"
+                        android:layout_gravity="center"
+                        android:textSize="20dp"
                         android:inputType="textAutoCorrect"
+                        android:layout_weight=".3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Contraseña: "
+                        android:textSize="20dp"
+                        android:id="@+id/textView4"
                         android:layout_weight=".3" />
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
-                        android:inputType="number"
-                        android:textSize="30dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pass"
+                        android:textSize="20dp"
                         android:layout_margin="5dp"
-                        android:hint="Edad"
+                        android:hint="Contraseña"
                         android:textColorHint="@color/lightgray"
                         android:textColor="@color/white"
                         android:background="@drawable/boton1"
-                        android:gravity="center"
-                        android:id="@+id/editText3"
-                        android:layout_gravity="center"
-                        android:layout_below="@+id/editText2"
+                        android:gravity="left"
+                        android:inputType="textPassword|textAutoComplete"
+                        android:layout_weight=".3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Repita Contraseña: "
+                        android:textSize="20dp"
+                        android:id="@+id/textView5"
+                        android:layout_weight=".3" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword|textAutoComplete"
+                        android:textSize="20dp"
+                        android:layout_margin="5dp"
+                        android:hint="Repita la contraseña"
+                        android:textColorHint="@color/lightgray"
+                        android:textColor="@color/white"
+                        android:background="@drawable/boton1"
+                        android:gravity="left"
+                        android:id="@+id/pass2"
                         android:layout_centerHorizontal="true"
                         android:layout_weight=".3"/>
                 </LinearLayout>
@@ -137,7 +183,7 @@
                 android:text="Siguiente"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="40dp"
                 android:id="@+id/button"
                 android:gravity="center"
                 android:background="@drawable/boton2"

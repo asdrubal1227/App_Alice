@@ -3,30 +3,51 @@
     package="com.example.brayanasdrubal.appalice">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/icon_app"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Splash">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/ID_APP" />
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Splash"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".cuenta" />
-        <activity android:name=".info_cuidador" />
-        <activity android:name=".Juegos" />
-        <activity android:name=".Memorias" />
-        <activity android:name=".Evaluate" />
+        <activity
+            android:name=".cuenta"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".info_cuidador"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Juegos"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Memorias"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Evaluate"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.keyes.youtube.OpenYouTubePlayerActivity"
             android:configChanges="fontScale"
@@ -34,15 +55,47 @@
             android:screenOrientation="fullSensor" />
         <activity
             android:name=".video"
-            android:theme="@style/Base.Theme.AppCompat.Dialog" />
-        <activity android:name=".sudoku" />
-        <activity android:name=".Logica"></activity>
-        <activity android:name=".finjuego"></activity>
-        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".sudoku"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Logica"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".finjuego"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Interfaz"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".face"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!--
+            <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider1234"
+            android:exported="true" />
+        -->
+        <activity android:name=".goo" />
+        <activity
+            android:name=".Verifica"
+            android:theme="@style/Base.Theme.AppCompat.Dialog"></activity>
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".Memoria"></activity>
     </application>
 
 </manifest>

@@ -130,6 +130,7 @@
                         android:text="    MEMORIA"
                         android:textSize="35dp"
                         android:textColor="@color/white"
+                        android:onClick="memo"
                         android:background="@drawable/boton_memoria"
                         android:adjustViewBounds="true"/>
 

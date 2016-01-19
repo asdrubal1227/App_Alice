@@ -1,6 +1,8 @@
 package com.example.brayanasdrubal.appalice;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
@@ -26,9 +28,17 @@ public class Splash extends AppCompatActivity {
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                Intent i = new Intent().setClass(Splash.this, MainActivity.class);
-                startActivity(i);
-                finish();
+                SharedPreferences prefs = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
+                int dato= prefs.getInt("entro",0);
+                if (dato==0) {
+                    Intent i = new Intent().setClass(Splash.this, Interfaz.class);
+                    startActivity(i);
+                    finish();
+                } else if (dato==1) {
+                    Intent i = new Intent().setClass(Splash.this, MainActivity.class);
+                    startActivity(i);
+                    finish();
+                }
             }
         };
 

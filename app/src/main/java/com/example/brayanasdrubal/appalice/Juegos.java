@@ -21,4 +21,7 @@ public class Juegos extends AppCompatActivity {
     public void logica (View view){
         startActivity(new Intent(Juegos.this,Logica.class));
     }
+    public void memo (View view){
+        startActivity(new Intent(Juegos.this,Memoria.class));
+    }
 }

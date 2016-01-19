@@ -10,7 +10,6 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.provider.CalendarContract;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -143,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
         //pieMenu.addMenuEntry(menuItem);
         //pieMenu.addMenuEntry(menuExpandItem);
         layout.addView(pieMenu, width / 6 * 5, width / 6 * 5);
-        Toast.makeText(MainActivity.this, Integer.toString(width), Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, "App Alice", Toast.LENGTH_SHORT).show();
 		/*Button testButton = (Button) this.findViewById(R.id.radial_menu_btn);
 		testButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
@@ -245,12 +244,21 @@ public class MainActivity extends AppCompatActivity {
     }*/
 
     public void refeshPrefs(){
-
-
-        SharedPreferences prefs= PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         TextView info= (TextView) findViewById(R.id.textView);
-        String dato= prefs.getString("nombre","Hola");
+        SharedPreferences prefs = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
+        String dato= prefs.getString("nombre","?");
         info.setText("Hola "+dato);
 
+    }
+
+
+    public void cs(View v){
+        SharedPreferences prefs = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor=prefs.edit();
+        editor.putInt("entro",0);
+        editor.commit();
+        Intent i = new Intent(MainActivity.this, Interfaz.class);
+        startActivity(i);
+        finish();
     }
 }
