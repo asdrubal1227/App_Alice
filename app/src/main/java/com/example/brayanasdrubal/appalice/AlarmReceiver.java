@@ -19,10 +19,16 @@ public class AlarmReceiver extends BroadcastReceiver {
         Toast.makeText(context, "App Alice", Toast.LENGTH_SHORT).show();
         NotificationCompat.Builder builder =
                 new NotificationCompat.Builder(context)
-                        .setSmallIcon(R.drawable.icon_app)
+                        .setSmallIcon(R.drawable.ic_app2)
+                        .setTicker("App Alice te recuerda")
                         .setContentTitle("App Alice")
                         .setContentText("Es hora de que entrenes de nuevo")
-                        .setLargeIcon(BitmapFactory.decodeResource(Resources.getSystem(),R.drawable.ic_app2));
+                        .setLargeIcon(BitmapFactory.decodeResource(Resources.getSystem(), R.drawable.ic_app2))
+                        .setAutoCancel(true);
+        // Patrón de vibración: 1 segundo vibra, 0.5 segundos para, 1 segundo vibra
+        long[] pattern = new long[]{2000,1000,2000};
+// Uso en API 11 o mayor
+        builder.setVibrate(pattern);
 
         Intent notificationIntent = new Intent(context, MainActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(context, 0, notificationIntent,

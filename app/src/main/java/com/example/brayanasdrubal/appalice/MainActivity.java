@@ -36,6 +36,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private PendingIntent pendingIntent;
+    public  static int regreso=0;
     public YouTubePlayerView youtube;
     public YouTubePlayer.OnInitializedListener onInitializedListener;
 
@@ -58,9 +59,14 @@ public class MainActivity extends AppCompatActivity {
         refeshPrefs();
         Intent alarmIntent = new Intent(MainActivity.this, AlarmReceiver.class);
         pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, alarmIntent, 0);
-        cancel();
-        start();
-        removeNotification();
+        if (regreso==0) {
+            cancel();
+            start();
+            removeNotification();
+        }else {
+            removeNotification();
+            regreso=0;
+        }
 
         layout = (LinearLayout) this.findViewById(R.id.menu);
         layout2 = (LinearLayout) this.findViewById(R.id.este);
@@ -257,7 +263,7 @@ public class MainActivity extends AppCompatActivity {
         TextView info= (TextView) findViewById(R.id.textView);
         SharedPreferences prefs = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
         String dato= prefs.getString("nombre", "?");
-        info.setText("Hola "+dato);
+        info.setText("Hola " + dato);
 
     }
 
@@ -274,16 +280,20 @@ public class MainActivity extends AppCompatActivity {
 
     public void start() {
         AlarmManager manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        int interval = 1000 * 60 * 1;
+        int interval = 1000 * 60 * 5;
 
         manager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), interval, pendingIntent);
-        Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+    }
+
+    public void map(View view) {
+        Intent i = new Intent(MainActivity.this, MapsActivity.class);
+        startActivity(i);
     }
 
     public void cancel() {
         AlarmManager manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         manager.cancel(pendingIntent);
-        Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
     }// Remove notification
     private void removeNotification() {
         NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);

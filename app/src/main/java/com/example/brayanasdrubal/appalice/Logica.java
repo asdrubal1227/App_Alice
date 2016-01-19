@@ -8,6 +8,7 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -31,6 +32,7 @@ public class Logica extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_logica);
         Button b=(Button) findViewById(R.id.bl);
         b.setVisibility(View.VISIBLE);
@@ -153,8 +155,10 @@ public class Logica extends AppCompatActivity {
             countDownTimer.cancel();
             Logica.ju=5;
             Logica.punt=0;
+            Memoria.puntaje=0;
+            Memoria.fallas=0;
+            Evaluate.n=0;
             finish();
-
             return true;
 
         }

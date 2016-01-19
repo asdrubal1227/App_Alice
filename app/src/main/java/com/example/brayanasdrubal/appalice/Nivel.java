@@ -1,8 +1,7 @@
 package com.example.brayanasdrubal.appalice;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Window;
 import android.widget.TextView;
@@ -10,34 +9,17 @@ import android.widget.TextView;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class finjuego extends AppCompatActivity {
-    private static final long SPLASH_DELAY = 4000;
+public class Nivel extends AppCompatActivity {
+    private static final long SPLASH_DELAY = 7000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_finjuego);
-        TextView punt=(TextView) findViewById(R.id.punf);
-        if (Evaluate.n==1){
-            Evaluate.n=2;
-            startActivity(new Intent(finjuego.this, Memoria.class));
-            finish();
-        }else if (Evaluate.n==2){
-            Evaluate.promedio=((Logica.punt*(0.5)+Memoria.puntaje)/2+Evaluate.promedio)/2;
-            Logica.ju=5;
-            Logica.punt=0;
-            Memoria.puntaje=0;
-            Memoria.fallas=0;
-            startActivity(new Intent(finjuego.this, Nivel.class));
-            overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
-            finish();
+        setContentView(R.layout.activity_nivel);
 
-        }else if (Memoria.puntaje!=0){
-            punt.setText("Puntaje: " + (Memoria.puntaje * 10 - Memoria.fallas * 5));
-
-        }else
-        punt.setText("Puntaje: " + Logica.punt);
+        TextView avance=(TextView) findViewById(R.id.avan);
+        avance.setText(Double.toString(Evaluate.promedio));
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
@@ -45,6 +27,7 @@ public class finjuego extends AppCompatActivity {
                 Logica.punt=0;
                 Memoria.puntaje=0;
                 Memoria.fallas=0;
+                Evaluate.n=0;
                 overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
                 finish();
 

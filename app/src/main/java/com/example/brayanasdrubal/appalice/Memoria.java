@@ -10,6 +10,7 @@ import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -54,6 +55,7 @@ public class Memoria extends AppCompatActivity implements Runnable {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_memoria);
         puntaje=0;
         fallas=0;
@@ -339,8 +341,11 @@ public class Memoria extends AppCompatActivity implements Runnable {
     {
         if ((keyCode == KeyEvent.KEYCODE_BACK))
         {
+            Logica.ju=5;
+            Logica.punt=0;
             Memoria.puntaje=0;
             Memoria.fallas=0;
+            Evaluate.n=0;
             finish();
 
             return true;

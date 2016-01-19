@@ -217,7 +217,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|left"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 android:gravity="center"
                 android:layout_weight="1"
                 android:text="Llamada Cuidador"
@@ -232,15 +232,16 @@
                     android:layout_weight="1">
                     <Button
                         android:layout_width="wrap_content"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="right|bottom"
                         android:gravity="center"
                         android:layout_weight="1"
                         android:text="Donde estoy?"
                         android:textColor="@color/white"
-                        android:onClick="cal"
-                        android:background="@drawable/boton3"/>
+                        android:onClick="map"
+                        android:background="@drawable/boton4"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -249,8 +250,8 @@
                     android:layout_weight="1">
             <Button
                 android:layout_width="wrap_content"
-                android:layout_marginLeft="20dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_gravity="right|bottom"
                 android:gravity="center"
                 android:layout_weight="1"
