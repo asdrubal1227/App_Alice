@@ -13,6 +13,7 @@
     <string name="signed_in_fmt2">Correo: %s</string>
     <string name="title_activity_maps">Map</string>
 
+    <string name="acerca">Acerca de ...</string>
     <string name="menu_titulo">Identifica el objeto</string>
     <string name="menu_jugar">Jugar</string>
     <string name="menu_acerca">Acerca</string>
@@ -24,4 +25,6 @@
     <string name="total_puntos">Intentos : </string>
     <string name="msg_ganaste">Identificaste todos los objetos</string>
     <string name="msg_perdiste"> Te has quedado sin intentos. Intentalo de Nuevo </string>
+
+    <string name="Acerca">App Alice V. 1.0 por:\nBrayan Hoyos Gómez\nShara Cadavid A\nMoviles 2015</string>
 </resources>

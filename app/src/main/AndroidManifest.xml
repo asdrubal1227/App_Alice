@@ -144,6 +144,10 @@
             android:name=".Perder"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".Acercade"
+            android:label="App Alice"
+            android:theme="@style/Base.Theme.AppCompat.Dialog"></activity>
     </application>
 
 </manifest>
