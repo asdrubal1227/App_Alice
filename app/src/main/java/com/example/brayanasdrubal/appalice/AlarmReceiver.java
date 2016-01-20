@@ -1,5 +1,6 @@
 package com.example.brayanasdrubal.appalice;
 
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -29,6 +30,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         long[] pattern = new long[]{2000,1000,2000};
 // Uso en API 11 o mayor
         builder.setVibrate(pattern);
+        builder.setDefaults(Notification.DEFAULT_SOUND);
 
         Intent notificationIntent = new Intent(context, MainActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(context, 0, notificationIntent,

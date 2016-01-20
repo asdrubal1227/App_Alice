@@ -1,6 +1,8 @@
 package com.example.brayanasdrubal.appalice;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
@@ -24,7 +26,13 @@ public class finjuego extends AppCompatActivity {
             startActivity(new Intent(finjuego.this, Memoria.class));
             finish();
         }else if (Evaluate.n==2){
-            Evaluate.promedio=((Logica.punt*(0.5)+Memoria.puntaje)/2+Evaluate.promedio)/2;
+
+            SharedPreferences prefs = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
+            float promedio= prefs.getFloat("promedio",0);
+            Evaluate.promedio= (float) (((Logica.punt*(0.5)+Memoria.puntaje)/2+promedio)/2);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putFloat("promedio", Evaluate.promedio);
+            editor.commit();
             Logica.ju=5;
             Logica.punt=0;
             Memoria.puntaje=0;

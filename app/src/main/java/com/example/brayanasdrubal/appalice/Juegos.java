@@ -32,6 +32,7 @@ public class Juegos extends AppCompatActivity {
         if ((keyCode == KeyEvent.KEYCODE_BACK))
         {
             MainActivity.regreso=1;
+            finish();
             return true;
         }
         return super.onKeyDown(keyCode, event);

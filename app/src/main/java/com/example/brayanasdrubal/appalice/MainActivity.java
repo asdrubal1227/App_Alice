@@ -190,6 +190,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(CalendarContract.Events.DESCRIPTION, "Descripción");
         intent.putExtra(CalendarContract.Events.EVENT_LOCATION, "Lugar");
 
+        regreso=1;
         activity.startActivity(intent);
 
     }
@@ -280,7 +281,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void start() {
         AlarmManager manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        int interval = 1000 * 60 * 5;
+        int interval = 1000 * 60 * 10;
 
         manager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), interval, pendingIntent);
         //Toast.makeText(this, "", Toast.LENGTH_SHORT).show();

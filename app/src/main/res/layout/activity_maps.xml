@@ -6,7 +6,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@drawable/boton1"
-        tools:context="com.example.brayanasdrubal.practica6.MapsActivity" >
+        tools:context="com.example.brayanasdrubal.appalice.MapsActivity" >
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -15,7 +15,7 @@
         <TextView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:text="Aqui estoy!"
+    android:text="@string/accept"
     android:textSize="25dp"
     android:textColor="@color/white"
     android:id="@+id/maptext"
@@ -28,5 +28,5 @@
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.brayanasdrubal.practica6.MapsActivity" />
+    tools:context="com.example.brayanasdrubal.appalice.MapsActivity" />
    </LinearLayout>

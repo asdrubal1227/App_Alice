@@ -1,5 +1,7 @@
 package com.example.brayanasdrubal.appalice;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -18,8 +20,9 @@ public class Nivel extends AppCompatActivity {
         this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_nivel);
 
-        TextView avance=(TextView) findViewById(R.id.avan);
-        avance.setText(Double.toString(Evaluate.promedio));
+        TextView avance=(TextView) findViewById(R.id.avan);SharedPreferences prefs = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
+        float promedio= prefs.getFloat("promedio",0);
+        avance.setText(Double.toString(promedio));
         TimerTask task = new TimerTask() {
             @Override
             public void run() {

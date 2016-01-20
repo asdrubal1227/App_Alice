@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.view.KeyEvent;
+import android.view.Menu;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdate;
@@ -96,7 +97,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mCam= CameraUpdateFactory.newLatLngZoom(new LatLng(6.2657628, -75.5748746), 12);
         mMap.animateCamera(mCam);
         // Add a marker in Sydney and move the camera
-        LatLng udea1 = new LatLng(lat1, lon1);
+        /*LatLng udea1 = new LatLng(lat1, lon1);
         mMap.addMarker(new MarkerOptions().position(udea1).title(ubica1).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))).showInfoWindow();
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(0, 0)));
         // MarkerOptions marker = new MarkerOptions().position(udea).title("Hello Maps");
@@ -114,7 +115,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //       mCam=CameraUpdateFactory.newLatLngZoom(udea2,12);
         // mMap.animateCamera(mCam);
 
-                /*if (MainActivity.num !=1){
+                if (MainActivity.num !=1){
                     LatLng udea3 = new LatLng(lat3, lon3);
                     mMap.addMarker(new MarkerOptions().position(udea3).title(ubica3).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))).showInfoWindow();
                     //mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(0, 0)));
@@ -123,10 +124,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     //googleMap.addMarker(marker.showInfoWindow();
                     //         mCam=CameraUpdateFactory.newLatLngZoom(udea3, 12);
                     //         mMap.animateCamera(mCam);
-                }/*/
+                }
 
         TextView mt = (TextView) findViewById(R.id.maptext);
-        //mt.setText(LisTabs.mapt);
+        mt.setText(LisTabs.mapt);*/
 
     }
 
@@ -141,12 +142,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-   /* @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
-    }*/
+    }
 
     public void setLocation(Location loc) {
         //Obtener la dirección de la calle a partir de la latitud y la longitud
@@ -199,10 +200,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 LatLng pos = new LatLng(loc.getLatitude(), loc.getLongitude());
                 //setMarker(pos, "UdeA", "Alma Mater");
                 //MarkerOptions marker = new MarkerOptions().position(pos).title("Hello Maps");
-                mCam = CameraUpdateFactory.newLatLngZoom(pos, 20);
+                mCam = CameraUpdateFactory.newLatLngZoom(pos, 12);
                 mMap.animateCamera(mCam);
                 //mMap.addMarker(marker).showInfoWindow();
-                //mMap.addMarker(new MarkerOptions().position(pos).title(getString(R.string.ubc)).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))).showInfoWindow();
+                mMap.addMarker(new MarkerOptions().position(pos).title("Aqui!").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))).showInfoWindow();
 
                 setLocation(loc);
                 n=10;
@@ -236,15 +237,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }/* End of Class MyLocationListener */
 
-
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event)
     {
         if ((keyCode == KeyEvent.KEYCODE_BACK))
         {
             MainActivity.regreso=1;
+            finish();
             return true;
         }
         return super.onKeyDown(keyCode, event);
     }
+
 }

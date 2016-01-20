@@ -1,6 +1,7 @@
 package com.example.brayanasdrubal.appalice;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -37,6 +38,18 @@ public class video extends YouTubeBaseActivity  {
 
 
     public void callYoutube(View view){
+    }
+
+    @Override
+         public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if ((keyCode == KeyEvent.KEYCODE_BACK))
+        {
+            MainActivity.regreso=1;
+            finish();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
 

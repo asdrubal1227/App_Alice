@@ -9,7 +9,7 @@ import android.view.Window;
 
 public class Evaluate extends AppCompatActivity {
 public  static int n=0;
-    public  static double  promedio=0;
+    public  static float  promedio=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +32,7 @@ public  static int n=0;
         if ((keyCode == KeyEvent.KEYCODE_BACK))
         {
             MainActivity.regreso=1;
+            finish();
             return true;
         }
         return super.onKeyDown(keyCode, event);
