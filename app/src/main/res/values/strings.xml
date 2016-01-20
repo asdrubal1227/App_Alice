@@ -12,4 +12,16 @@
     <string name="veri">Los datos no coinciden</string>
     <string name="signed_in_fmt2">Correo: %s</string>
     <string name="title_activity_maps">Map</string>
+
+    <string name="menu_titulo">Identifica el objeto</string>
+    <string name="menu_jugar">Jugar</string>
+    <string name="menu_acerca">Acerca</string>
+    <string name="menu_Salir">Salir</string>
+    <string name="menu_otro">Lista de palabras</string>
+    <string name="boton_text_aceptar">Aceptar</string>
+    <string name="pregunta">¿Qué objeto es?</string>
+    <string name="loser_text">Intentalo de nuevo</string>
+    <string name="total_puntos">Intentos : </string>
+    <string name="msg_ganaste">Identificaste todos los objetos</string>
+    <string name="msg_perdiste"> Te has quedado sin intentos. Intentalo de Nuevo </string>
 </resources>

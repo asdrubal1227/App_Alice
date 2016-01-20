@@ -102,16 +102,6 @@
                     android:layout_gravity="center"
                     android:orientation="vertical"
                     android:layout_weight=".25">
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="70dp"
-                        android:layout_margin="5dp"
-                        android:text="SUDOKU"
-                        android:textSize="35dp"
-                        android:onClick="sudoku"
-                        android:textColor="@color/white"
-                        android:background="@drawable/boton_sudoku"
-                        android:adjustViewBounds="true" />
 
                     <Button
                         android:layout_width="match_parent"
@@ -119,6 +109,7 @@
                         android:layout_margin="5dp"
                         android:text="LETRAS"
                         android:textSize="35dp"
+                        android:onClick="poke"
                         android:textColor="@color/white"
                         android:background="@drawable/boton_letras"
                         android:adjustViewBounds="true"/>
@@ -144,6 +135,17 @@
                         android:onClick="logica"
                         android:background="@drawable/boton_logica"
                         android:adjustViewBounds="true"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_margin="5dp"
+                        android:text="SUDOKU"
+                        android:textSize="35dp"
+                        android:onClick="sudoku"
+                        android:textColor="@color/white"
+                        android:background="@drawable/boton_sudoku"
+                        android:adjustViewBounds="true" />
                 </LinearLayout>
 
                 <LinearLayout

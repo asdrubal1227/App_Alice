@@ -25,6 +25,9 @@ public class Juegos extends AppCompatActivity {
     public void memo (View view){
         startActivity(new Intent(Juegos.this,Memoria.class));
     }
+    public void poke (View view){
+        startActivity(new Intent(Juegos.this,Principal.class));
+    }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event)
